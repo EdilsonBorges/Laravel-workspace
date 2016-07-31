@@ -11,13 +11,15 @@
 |
 */
 
-Route::get('/', function () {
-	$people = ['Taylor','Matt','Jeffrey'];
+// Route::get('/', function () {
+// 	$people = ['Taylor','Matt','Jeffrey'];
 
 
-    return view('welcome',compact('people')); // ->with('people',$people); 
-});
+//     return view('welcome',compact('people')); // ->with('people',$people); 
+// });
 
-Route::get('about',function(){
-	return view('pages.about'); // resources/views/pages/about.blade.php
-});
+// Route::get('about',function(){
+// 	return view('pages.about'); // resources/views/pages/about.blade.php
+// });
+
+Route::get('/','PagesController@home');
