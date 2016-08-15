@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Laravel</title>
+        <title>@yield('header')</title>
 
         <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
+
+        <link rel="stylesheet" type="text/css" href="{{ elixir('css/app.css')}}">
 
         <style>
             html, body {
@@ -36,10 +38,13 @@
         </style>
     </head>
     <body>
-        <div class="container">
+<!--         <div class="container">
             <div class="content">
                 <div class="title">About page</div>
             </div>
-        </div>
+        </div> -->
+        <h1>@yield('content')</h1>
+
+        @yield('footer')
     </body>
 </html>

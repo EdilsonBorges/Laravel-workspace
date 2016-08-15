@@ -1,4 +1,10 @@
-<!DOCTYPE html>
+@extends('layout')
+
+@section('content')
+    Welcome page goes here
+@stop
+
+<!-- <!DOCTYPE html>
 <html>
     <head>
         <title>Laravel</title>
@@ -46,3 +52,4 @@
         @endforeach
     </body>
 </html>
+ -->
