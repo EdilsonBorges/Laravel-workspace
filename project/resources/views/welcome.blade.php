@@ -1,7 +1,7 @@
 @extends('layout')
 
 @section('content')
-    Welcome page goes here
+    Eu sou a pagina mais bonitinha de todas. Super simples :D
 @stop
 
 <!-- <!DOCTYPE html>
