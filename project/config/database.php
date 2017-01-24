@@ -49,6 +49,7 @@ return [
         'sqlite' => [
             'driver' => 'sqlite',
             'database' => env('DB_DATABASE', database_path('database.sqlite')),
+            'password' => env('DB_PASSWORD', '1234'),
             'prefix' => '',
         ],
 
