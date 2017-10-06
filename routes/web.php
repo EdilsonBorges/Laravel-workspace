@@ -19,6 +19,6 @@ Route::get('/about', function () {
     return view('pages.about');
 });
 
-Route::get('/users/{id}', function ($id) {
-    return 'The id is: '.$id;
+Route::get('/users/{id}/{name}', function ($id, $user) {
+    return 'The id is: '.$user. ' with id: ' . $id;
 });
