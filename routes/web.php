@@ -11,14 +11,16 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Route::get('/about', function () {
     return view('pages.about');
 });
 
-Route::get('/users/{id}/{name}', function ($id, $user) {
-    return 'The id is: '.$user. ' with id: ' . $id;
-});
+Route::get('/', 'PagesController@index');
+
+// Route::get('/users/{id}/{name}', function ($id, $user) {
+//     return 'The id is: '.$user. ' with id: ' . $id;
+// });
