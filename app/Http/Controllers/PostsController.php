@@ -15,9 +15,14 @@ class PostsController extends Controller
      */
     public function index()
     {
-        // $posts = Post::orderBy('title', 'desc')->get();
+     
+        $posts = Post::all();
         //return Post::where('title', 'Post Two')->get();
-        $posts = DB::select('SELECT * FROM posts');
+        //$posts = DB::select('SELECT * FROM posts');
+        // $posts = Post::orderBy('title', 'desc')->take(1)->get();
+        // $posts = Post::orderBy('title', 'desc')->get();
+        
+        $posts = Post::orderBy('title', 'desc')->paginate(10);
         return view('posts.index')->with('posts', $posts);
     }
 
