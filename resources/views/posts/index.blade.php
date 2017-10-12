@@ -7,6 +7,7 @@
             <div class="well">
                 <h3>
                     <a href="/posts/{{$post->id}}">{{$post->title}}</a>
+                     <a href="/posts/{{$post->id}}/edit" class="btn btn-default pull-right btn-xs">Edit</a>
                 </h3>
                 <small>Written on {{$post->created_at}}</small>
             </div>
