@@ -25,8 +25,8 @@
                         </thead>
                         @foreach($posts as $post)
                                 <tr>
-                                    <td>{{var_dump($post)}}</td>
-                                    <td><a href="" title=""></a></td>
+                                    <td>{{ $post->title }}</td>
+                                    <td><a href="/posts/{{$post->id}}/edit" class="btn btn-default">Edit</a></td>
                                     <td><a href="" title=""></td>
                                 </tr>
                         @endforeach
