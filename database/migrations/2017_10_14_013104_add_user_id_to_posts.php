@@ -25,6 +25,8 @@ class AddUserIdToPosts extends Migration
      */
     public function down()
     {
-        //
+        Schema::table('posts', function($table){
+            $table->dropColumn('user_id');
+        });
     }
 }
