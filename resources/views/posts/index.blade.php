@@ -9,7 +9,7 @@
                     <a href="/posts/{{$post->id}}">{{$post->title}}</a>
                      <a href="/posts/{{$post->id}}/edit" class="btn btn-default pull-right btn-xs">Edit</a>
                 </h3>
-                <small>Written on {{$post->created_at}}</small>
+                <small>Written on {{$post->created_at}} by {{$post->user->name}}</small>
             </div>
         @endforeach
         {{$posts->links()}}
