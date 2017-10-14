@@ -15,6 +15,22 @@
                     @endif
                     <a href="/posts/create" class="btn btn-primary">Create Post</a>
                     <h3>Your Blog Posts</h3>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Title</th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        @foreach($posts as $post)
+                                <tr>
+                                    <td>{{var_dump($post)}}</td>
+                                    <td><a href="" title=""></a></td>
+                                    <td><a href="" title=""></td>
+                                </tr>
+                        @endforeach
+                    </table>
                 </div>
             </div>
         </div>
