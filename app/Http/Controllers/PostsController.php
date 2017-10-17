@@ -57,11 +57,11 @@ class PostsController extends Controller
         // handle file upload
         if ($request->hasFile('cover_image')) {
             // filename with extension
-            $fileNameWithExt = $request->file('cover_image')->getClientOriginalImage();
+            $fileNameWithExt = $request->file('cover_image')->getClientOriginalName();
             // just the filename
             $filename = pathinfo($fileNameWithExt, PATHINFO_FILENAME);
             // just extension
-            $extension = $request->file('cover_image')->getOriginalClientExtension();
+            $extension = $request->file('cover_image')->getClientOriginalExtension();
             // filename to store
             $fileNameToStore = $filename . '_' . time() . '.' . $extension;
             // upload
@@ -75,6 +75,7 @@ class PostsController extends Controller
         $post->title = $request->input('title');
         $post->body = $request->input('body');
         $post->user_id = auth()->user()->id;
+        $post->cover_image = $fileNameToStore;
         $post->save();
 
         return redirect('/posts')->with('success', 'Post Created');
