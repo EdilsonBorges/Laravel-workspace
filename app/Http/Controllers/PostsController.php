@@ -58,9 +58,14 @@ class PostsController extends Controller
         if ($request->hasFile('cover_image')) {
             // filename with extension
             $fileNameWithExt = $request->file('cover_image')->getClientOriginalImage();
-            // just extension
+            // just the filename
             $filename = pathinfo($fileNameWithExt, PATHINFO_FILENAME);
+            // just extension
             $extension = $request->file('cover_image')->getOriginalClientExtension();
+            // filename to store
+            $fileNameToStore = $filename . '_' . time() . '.' . $extension;
+            // upload
+            $path = $request->file('cover_image')->storeAs('public/cover_images', $fileNameToStore);
         } else {
             $fileNameToStore = 'noimage.jpg';
         }
