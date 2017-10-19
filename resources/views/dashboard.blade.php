@@ -22,10 +22,16 @@
                                     <th>Title</th>
                                     <th></th>
                                     <th></th>
+                                    <th></th>
                                 </tr>
                             </thead>
                             @foreach($posts as $post)
                                     <tr>
+                                        <td>
+                                            <div class="col-md-4 col-sm-4">
+                                            <img style="width:100%" src="/storage/cover_images/{{$post->cover_image}}">
+                                            </div>
+                                        </td>
                                         <td>{{ $post->title }}</td>
                                         <td><a href="/posts/{{$post->id}}/edit" class="btn btn-default">Edit</a></td>
                                         <td>
