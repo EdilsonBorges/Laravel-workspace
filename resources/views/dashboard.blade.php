@@ -29,10 +29,12 @@
                                     <tr>
                                         <td>
                                             <div class="col-md-4 col-sm-4">
-                                            <img style="width:100%" src="/storage/cover_images/{{$post->cover_image}}">
+                                                <a href="/posts/{{$post->id}}">
+                                                    <img style="width:100%" src="/storage/cover_images/{{$post->cover_image}}">
+                                                </a>
                                             </div>
                                         </td>
-                                        <td>{{ $post->title }}</td>
+                                        <td><a href="/posts/{{$post->id}}">{{$post->title}}</td>
                                         <td><a href="/posts/{{$post->id}}/edit" class="btn btn-default">Edit</a></td>
                                         <td>
                                             {!!Form::open(['action' => ['PostsController@destroy', $post->id], 'method' => 'POST', 'class' => 'pull-right'])!!}
